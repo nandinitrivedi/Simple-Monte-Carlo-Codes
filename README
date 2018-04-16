@@ -1,0 +1,36 @@
+The programs in this subdirectory are related to evaluating a 1d integral
+of a product of functions F(x)=G1(x) * G2(x) in the range x=[0,1] using-- 
+
+(1) exact result (see notes): exact.f
+(2) quadrature methods: quad.f
+(3) Monte Carlo with random sampling of x: mc1.f
+	The error calculation in mc1.f cannot be trusted be the consecutive 
+	x values are highly correlated. In mc1_bin.f the data is binned 
+	to remove the correlations and the error on the average is obtained.
+(4) Monte Carlo with importance sampling of x: mc2.f
+	with proper evaluation of error : mc2_bin.f 
+These programs use a file 'param.dat' which is included automatically upon
+compilation, provided that file is in the same directry.
+
+These programs can be compiled in one shot using the shell script 
+'compile'  --
+To use it do the following--
+(a) % chmod u+x compile
+(b) % compile
+
+(The g77 compiler for linux operating system has been assumed; 
+in case your compiler is different, edit the 'compile' file
+and put in the appropriate compiler command).
+
+The result of typing '(b)' will be the  generation of corresponding
+executable files for all the programs in (1)--(4).
+To run them just type the name of the executable file at the prompt.
+The results will appear on the screen.
+
+Plotting the functions
+----------------------
+By choosing a fine grid in the range x=[0,1] the functions are tabulated
+for plotting purposes in files--
+plot_g1 for function G1(x)
+plot_g2 for function G2(x)
+plot_int for function F(x)

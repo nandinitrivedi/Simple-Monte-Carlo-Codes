@@ -1,0 +1,8 @@
+#
+g77 exact.f -o exact.x
+g77 plotf.f -o plot.x
+g77 quad.f -o quad.x
+g77 mc1.f -o mc1.x
+g77 mc2.f -o mc2.x
+g77 mc1_bin.f -o mc1_bin.x
+g77 mc2_bin.f -o mc2_bin.x

@@ -1,0 +1,2 @@
+	double precision a1,a2,sig1,sig2
+	parameter (a1=0.d0, a2=0.5d0, sig1=0.5d0,sig2=0.05d0)
